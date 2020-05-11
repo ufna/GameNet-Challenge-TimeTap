@@ -20,6 +20,8 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 
+	void ProccessTimeTap(float DeltaTime);
+
 	/** @TODO */
 	UFUNCTION(BlueprintCallable)
 	void ActivateTimeTap();

@@ -17,6 +17,32 @@ AGnTimeTapPlayerController::AGnTimeTapPlayerController(const FObjectInitializer&
 void AGnTimeTapPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	ProccessTimeTap(DeltaTime);
+}
+
+void AGnTimeTapPlayerController::ProccessTimeTap(float DeltaTime)
+{
+	if (!bTimeTapEnabled)
+	{
+		return;
+	}
+
+	if (TimeToTap <= 0.f)
+	{
+		UE_LOG(LogGnTimeTap, Error, TEXT("%s: TimeToTap is less than zero! %f"), *VA_FUNC_LINE, TimeToTap);
+		return;
+	}
+
+	CurrentTiming += (DeltaTime / TimeToTap);
+
+	if (CurrentTiming >= 1.f)
+	{
+		UE_LOG(LogGnTimeTap, Log, TEXT("%s: TimeTap event ended"), *VA_FUNC_LINE);
+		bTimeTapEnabled = false;
+
+		// @TODO Add more gameplay logic here
+	}
 }
 
 void AGnTimeTapPlayerController::ActivateTimeTap()
