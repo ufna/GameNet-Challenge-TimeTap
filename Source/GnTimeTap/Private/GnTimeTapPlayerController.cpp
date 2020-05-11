@@ -65,4 +65,6 @@ void AGnTimeTapPlayerController::TapNow()
 	UE_LOG(LogGnTimeTap, Log, TEXT("%s: Tap happened: %f"), *VA_FUNC_LINE, CurrentTiming);
 
 	bTimeTapEnabled = false;
+
+	// @TODO Gameplay logic here
 }
