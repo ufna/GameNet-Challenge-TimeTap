@@ -6,4 +6,4 @@ Contains example of time tap controller with simple C++ gameplay code and radial
 
 Bonus: example how to remove aliasing from screen-space materials
 
-![SCREENSHOT](SCREENSHOT.jpg)
+![SCREENSHOT](SCREENSHOT.png)
