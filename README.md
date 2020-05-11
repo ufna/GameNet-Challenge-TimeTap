@@ -6,4 +6,4 @@ Contains example of time tap controller with simple C++ gameplay code and radial
 
 Bonus: example how to remove aliasing from screen-space materials
 
-![SCREENSHOT](SCREENSHOT.png)
+![SCREENSHOT](ue4-radial-progress-bar.png)
