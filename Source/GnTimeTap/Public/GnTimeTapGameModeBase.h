@@ -13,4 +13,7 @@ UCLASS()
 class GNTIMETAP_API AGnTimeTapGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	AGnTimeTapGameModeBase(const FObjectInitializer& ObjectInitializer);
 };

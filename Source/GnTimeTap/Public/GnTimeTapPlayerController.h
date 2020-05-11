@@ -17,4 +17,29 @@ class GNTIMETAP_API AGnTimeTapPlayerController : public APlayerController
 
 public:
 	AGnTimeTapPlayerController(const FObjectInitializer& ObjectInitializer);
+
+	virtual void Tick(float DeltaTime) override;
+
+	/** @TODO */
+	UFUNCTION(BlueprintCallable)
+	void ActivateTimeTap();
+
+	/** @TODO */
+	UFUNCTION(BlueprintCallable)
+	void TapNow();
+
+	/** @TODO */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float TimeToTap;
+
+	/** @TODO */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float PerfectTiming;
+
+	/** @TODO */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float CurrentTiming;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool bTimeTapEnabled;
 };
